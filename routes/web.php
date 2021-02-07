@@ -14,3 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Controller@index')->name('LandingPage');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//penyedia jasa
+Route::get('/penyediajasa/dashboard', 'PenyediaJasaController@dashboard');
+Route::get('/penyediajasa/profil_usaha', 'PenyediaJasaController@profil_usaha');
+Route::get('/penyediajasa/kelola_jasa', 'PenyediaJasaController@kelola_jasa');
+Route::get('/penyediajasa/tambahjasa', 'PenyediaJasaController@tambah_jasa');
